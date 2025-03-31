@@ -1,0 +1,27 @@
+.nav__black {
+  background-color: rgb(20, 20, 20);
+}
+
+.header_outer_container {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b3b3b3;
+}
+
+.button .navbar-toggler-icon {
+  background-color: red;
+  border-radius: 5px;
+}
