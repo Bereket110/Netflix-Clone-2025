@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import NetflixLogo from "../../assets/images/netflix-clo.png";
 import SearchIcon from "@mui/icons-material/Search";
@@ -8,11 +8,22 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Header = () => {
+  const [show, handleShow] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else {
+      handleShow(false);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <Navbar
       expand="lg"
       // className="nav__black "
-      // className={`header_outer_container ${show && "nav__black"}`}
+      className={`header_outer_container ${show && "nav__black"}`}
       fixed="top"
     >
       <Container>
